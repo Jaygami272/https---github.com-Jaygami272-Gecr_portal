@@ -1,28 +1,21 @@
-@extends('layouts.app')
+@extends('layout.app')
 @section('heading')
 <h1>Departments</h1>
 @endsection
-@section('contant')
-<div class="pagetitle">
+@section('content')
+<div class="pagetitle" style="padding: 0px 0px 10px 1170px;">
     <div class="row">
-        <div class="col-sm-6">
-            <h1>Departments</h1>
-        </div>
-        <div class="col-sm-6">
-           <a href="{{route('departments.create')}}"> <button type="button" class="btn btn-gray float-right">Add Department</button></a>
-        </div>
+           <a href="department"> <button type="button" class="btn btn-gray float-right">Add Department</button></a>
     </div>
 </div>
 
 <section class="section">
     @include('flash::message')
-
     <div class="clearfix"></div>
-
     <div class="row">
         @foreach ($department as $departments)
         <div class="col-md-4">
-            <a href="{{route('departments.show',$departments->id)}}">
+            <a href="departmentd/{{$departments->id}}">
                 <div class="card unit-card p-3">
                     <div class="d-flex justify-content-between">
                         <div class="d-flex flex-row align-items-center">

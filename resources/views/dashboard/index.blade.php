@@ -1,12 +1,13 @@
-@extends('layouts.app')
+@extends('layout.app')
 @section('heading')
 <h1>Deshboard</h1>
 @endsection
-@section('contant')
+@section('content')
+<section class="section">
 <div class="row">
     <div class="col-sm-3">
         <a href="{{ route('departments.index') }}">
-            <div class="card bg-primary mb-3 dcard">
+            <div class="card bg-secondary mb-3 dcard">
                 <div class="card-body">
                     <h2>{{ $count['departments'] }}</h2>
                     <p>Departments</p>
@@ -16,8 +17,8 @@
                 </div>
             </div>
         </a>
-    </div>    
+    </div> 
+       
 </div>
-
-
+</section>
 @endsection
